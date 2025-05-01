@@ -1,0 +1,126 @@
+.header-wrap {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.wrap {
+  padding: 0 3rem;
+  width: 100%;
+  max-width: 130rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10.6rem;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+}
+.header .svg-icon {
+  display: block;
+}
+
+.header-logo {
+  display: inline-block;
+  width: 5.5rem;
+  height: 6.9rem;
+  min-width: 4.5rem;
+  margin-top: -0.5rem;
+  background: url(../assets/images/header-logo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header_menu {
+  margin-left: 3%;
+  flex: 1;
+}
+.header-menu-list {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.menu-item a {
+  text-decoration: none;
+  color: black;
+}
+.header_city-changer {
+  margin-left: 3%;
+}
+.header_city-changer .svg-icon  {
+  fill: rgb(37, 164, 161, 1);
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.header_contacts {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3.2%;
+}
+.header_contacts > * + * {
+  margin-top: 6.5px;
+}
+.header-contact {
+  display: flex;
+  color:black;
+  text-decoration: none;
+}
+.header-contact .svg-icon {
+  fill: black !important;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 20px;
+}
+
+.header_user {
+  display:flex;
+  align-items: center;
+  margin-left: 3.2%;
+}
+.header-user {
+  padding: 0.5rem;
+}
+.header-user .svg-icon {
+  fill:#25A4A1;;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.header-cart {
+  display: flex;
+  color:#25A4A1;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+.header-cart-price {
+  margin-left: 0.6rem;
+}
+.header-cart .svg-icon {
+  fill:#25A4A1;;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.header_button {
+  margin: -0.5rem 0 0 2.2%
+}
+.btn {
+  display: inline-block;
+  font-size: 1.6rem;
+  height: 5.7rem;
+  padding: 2rem 3rem;
+  background-color: #25A4A1;
+  color:white;
+  text-decoration: none;
+  vertical-align: top;
+  line-height: 1em;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+.btn {}
+
+@media (min-width: 1024px) and (max-height: 800px) {
+  .header {
+    height: 9rem
+  }
+}

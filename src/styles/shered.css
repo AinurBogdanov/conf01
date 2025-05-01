@@ -1,0 +1,16 @@
+html {
+  font-family: 'Futura PT Book', Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Futura PT Book';
+  src: url(../assets/fonts/Futura/FuturaCyrillicBook.woff2);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
