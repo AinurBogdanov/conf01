@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination'
 
 
-export default function initSwiper() {
+export function initSwiper() {
   document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.swiper-container', {
     modules: [Pagination, Autoplay],
@@ -33,4 +33,14 @@ export default function initSwiper() {
     },
   });
   });
+}
+
+export function initSecondSwiper() {
+ const swiper = new Swiper('.swiper-container-main',{
+  modules: [Pagination],
+  loop: true,
+  direction: 'horizontal',
+  slidesPerView: 1,
+  spaceBetween: 20,
+ }) 
 }

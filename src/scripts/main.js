@@ -1,4 +1,4 @@
-import initSwiper from "./InitSwiper";
+import { initSwiper,initSecondSwiper } from "./InitSwiper";
 
 initSwiper();
-
+initSecondSwiper();

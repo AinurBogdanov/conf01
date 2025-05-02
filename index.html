@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="_screen-scrolling">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="./src/styles/shered.css">
   <link rel="stylesheet" href="./src/styles/header.css">
   <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="stylesheet" href="./src/styles/main-slider.css">
+  <link rel="stylesheet" href="./src/styles/second-slide.css">
 </head>
 <body>
   <script src="./src/scripts/main.js" type="module"></script>
@@ -69,8 +71,9 @@
         </header>
       </div>
     </div>
+    
     <main class="content" role="main">
-      <div class="screen-scroll">
+      <div class="screen-scroll ">
         <div class="promo">
           <div class="wrap">
             <div class="swiper-container">
@@ -108,12 +111,24 @@
         </div>
       </div>
 
-      <div class="screen-scroll">
+      <div class="screen-scroll screen-scroll-active">
         <div class="main-categories">
           <div class="wrap">
-            <div class="main-label"></div>
-            <div class="swiper-container main-categories-slider">
+            <div class="main-label">
+              <div class="main-lable-icon">
+                <img src="./src/assets/images/lable-icon-inside.svg" alt="">
+              </div>
+              Категории
+              <div class="main-categories__paginator swiper-pagination-fraction">
+                <span class="swiper-pagination-current">1</span>
+                /
+                <span class="swiper-pagination-total">8</span>
+              </div>
+            </div>
+
+            <div class="swiper-container-main main-categories-slider">
               <div class="swiper-wrapper">
+
                 <div class="swiper-slide">
                   <div class="main-category">
                     <a href="#">
@@ -124,7 +139,43 @@
                         Сладкая выпечка 
                         <div class="main-subcategory-count">13</div>
                         <div class="main-subcategory-img">
-                          <img src="" alt="">
+                          <img src="./src/assets/images/menu-slider-images/bakeary1.jpg" alt="image">
+                        </div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Киши
+                        <div class="main-subcategory-count">13</div>
+                        <div class="main-subcategory-img">
+                          <img src="./src/assets/images/menu-slider-images/bakeary2.jpg" alt="image">
+                        </div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Пироги и пирожки
+                        <div class="main-subcategory-count">13</div>
+                        <div class="main-subcategory-img">
+                          <img src="./src/assets/images/menu-slider-images/bakeary3.jpg" alt="image">
+                        </div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Сэндвичи
+                        <div class="main-subcategory-count">13</div>
+                        <div class="main-subcategory-img">
+                          <img src="./src/assets/images/menu-slider-images/bakeary4.png" alt="image">
+                        </div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Хлеб
+                        <div class="main-subcategory-count">13</div>
+                        <div class="main-subcategory-img">
+                          <img src="./src/assets/images/menu-slider-images/bakeary5.jpg" alt="image">
                         </div>
                       </div>  
                     </a>
@@ -133,14 +184,45 @@
                 <div class="swiper-slide">
                   <div class="main-category">
                     <a href="#">
-                      <h2 class="main-cartegory-title">Пекарня</h2>
+                      <h2 class="main-cartegory-title">Торты</h2>
                     </a>
                     <a href="#" class="main-subcategory">
                       <div class="main-subcategory-title">
-                        Сладкая выпечка 
+                        Заказные торты
                         <div class="main-subcategory-count">13</div>
                         <div class="main-subcategory-img">
-                          <img src="" alt="">
+                          <img src="./src/assets/images/menu-slider-images/cake1.jpg" alt="image">
+                        </div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Готовые торты
+                        <div class="main-subcategory-count">13</div>
+                      </div>  
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="main-category">
+                    <a href="#">
+                      <h2 class="main-cartegory-title">Кондитерская</h2>
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Пирожные
+                        <div class="main-subcategory-count">13</div>
+                        <div class="main-subcategory-img">
+                          <img src="src\assets\images\menu-slider-images\confectionary1.jpg" alt="image">
+                        </div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Десерты
+                        <div class="main-subcategory-count">13</div>
+                        <div class="main-subcategory-img">
+                          <img src="src\assets\images\menu-slider-images\confectionary2.jpg" alt="image">
                         </div>
                       </div>  
                     </a>
@@ -149,14 +231,41 @@
                 <div class="swiper-slide">
                   <div class="main-category">
                     <a href="#">
-                      <h2 class="main-cartegory-title">Пекарня</h2>
+                      <h2 class="main-cartegory-title">Кухня</h2>
                     </a>
                     <a href="#" class="main-subcategory">
                       <div class="main-subcategory-title">
-                        Сладкая выпечка 
+                        Горячие блюда
                         <div class="main-subcategory-count">13</div>
                         <div class="main-subcategory-img">
-                          <img src="" alt="">
+                          <img src="src\assets\images\menu-slider-images\kuhna1.jpg" alt="image">
+                        </div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Завтраки
+                        <div class="main-subcategory-count">13</div>
+                        <div class="main-subcategory-img">
+                          <img src="src\assets\images\menu-slider-images\kuhna2.jpg" alt="image">
+                        </div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Салаты
+                        <div class="main-subcategory-count">13</div>
+                        <div class="main-subcategory-img">
+                          <img src="src\assets\images\menu-slider-images\kuhna3.jpg" alt="image">
+                        </div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Супы
+                        <div class="main-subcategory-count">13</div>
+                        <div class="main-subcategory-img">
+                          <img src="src\assets\images\menu-slider-images\kuhna4.jpg" alt="image">
                         </div>
                       </div>  
                     </a>
@@ -165,14 +274,50 @@
                 <div class="swiper-slide">
                   <div class="main-category">
                     <a href="#">
-                      <h2 class="main-cartegory-title">Пекарня</h2>
+                      <h2 class="main-cartegory-title">Фуршетное меню</h2>
                     </a>
                     <a href="#" class="main-subcategory">
                       <div class="main-subcategory-title">
-                        Сладкая выпечка 
+                        Канкапе и салаты  
                         <div class="main-subcategory-count">13</div>
                         <div class="main-subcategory-img">
-                          <img src="" alt="">
+                          <img src="src\assets\images\menu-slider-images\fur1.jpg" alt="image">
+                        </div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Шашлыки 
+                        <div class="main-subcategory-count">13</div>
+                        <div class="main-subcategory-img">
+                          <img src="src\assets\images\menu-slider-images\fur2.jpg" alt="image">
+                        </div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Круассаны и сэндвичи  
+                        <div class="main-subcategory-count">13</div>
+                        <div class="main-subcategory-img">
+                          <img src="src\assets\images\menu-slider-images\fur3.jpg" alt="image">
+                        </div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Десертный стол  
+                        <div class="main-subcategory-count">13</div>
+                        <div class="main-subcategory-img">
+                          <img src="src\assets\images\menu-slider-images\fur4.jpg" alt="image">
+                        </div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Брускетты
+                        <div class="main-subcategory-count">13</div>
+                        <div class="main-subcategory-img">
+                          <img src="src\assets\images\menu-slider-images\fur5.jpg" alt="image">
                         </div>
                       </div>  
                     </a>
@@ -181,14 +326,45 @@
                 <div class="swiper-slide">
                   <div class="main-category">
                     <a href="#">
-                      <h2 class="main-cartegory-title">Пекарня</h2>
+                      <h2 class="main-cartegory-title">Предзаказ за 72 часа</h2>
                     </a>
                     <a href="#" class="main-subcategory">
                       <div class="main-subcategory-title">
-                        Сладкая выпечка 
+                        Пирожки на заказ
+                        <div class="main-subcategory-count">13</div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Каравай на заказ
+                        <div class="main-subcategory-count">13</div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Кулебяки на заказ
+                        <div class="main-subcategory-count">13</div>
+                      </div>  
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Пироги на заказ
+                        <div class="main-subcategory-count">13</div>
+                      </div>  
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="main-category">
+                    <a href="#">
+                      <h2 class="main-cartegory-title">Напитки</h2>
+                    </a>
+                    <a href="#" class="main-subcategory">
+                      <div class="main-subcategory-title">
+                        Напитки 
                         <div class="main-subcategory-count">13</div>
                         <div class="main-subcategory-img">
-                          <img src="" alt="">
+                          <img src="./src/assets/images/menu-slider-images/drinks1.jpg" alt="image">
                         </div>
                       </div>  
                     </a>
@@ -197,51 +373,20 @@
                 <div class="swiper-slide">
                   <div class="main-category">
                     <a href="#">
-                      <h2 class="main-cartegory-title">Пекарня</h2>
+                      <h2 class="main-cartegory-title">Заказные торты, предзаказ за 48 часов</h2>
                     </a>
                     <a href="#" class="main-subcategory">
                       <div class="main-subcategory-title">
-                        Сладкая выпечка 
-                        <div class="main-subcategory-count">13</div>
+                        Заказные торты, предзаказ за 48 часов
+                        <div class="main-subcategory-count">1</div>
                         <div class="main-subcategory-img">
-                          <img src="" alt="">
+                          <img src="./src/assets/images/menu-slider-images/bakeary1.jpg" alt="image">
                         </div>
                       </div>  
                     </a>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="main-category">
-                    <a href="#">
-                      <h2 class="main-cartegory-title">Пекарня</h2>
-                    </a>
-                    <a href="#" class="main-subcategory">
-                      <div class="main-subcategory-title">
-                        Сладкая выпечка 
-                        <div class="main-subcategory-count">13</div>
-                        <div class="main-subcategory-img">
-                          <img src="" alt="">
-                        </div>
-                      </div>  
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="main-category">
-                    <a href="#">
-                      <h2 class="main-cartegory-title">Пекарня</h2>
-                    </a>
-                    <a href="#" class="main-subcategory">
-                      <div class="main-subcategory-title">
-                        Сладкая выпечка 
-                        <div class="main-subcategory-count">13</div>
-                        <div class="main-subcategory-img">
-                          <img src="" alt="">
-                        </div>
-                      </div>  
-                    </a>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>

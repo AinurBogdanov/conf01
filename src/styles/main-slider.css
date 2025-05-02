@@ -1,0 +1,81 @@
+.promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.swiper-container {
+  overflow: hidden;
+  position: relative;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height:100%;
+  display: flex;
+  box-sizing: content-box;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  position: relative;
+  width: 1240px;
+  margin-right: 0px;
+  padding-bottom: 40.4%;
+}
+.promo_img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.promo_img img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.swiper-pagination {
+  bottom: 10px;
+}
+.promo_link {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.promo_link .btn {
+  margin-top: auto;
+}
+.swiper-container .swiper-pagination .swiper-pagination-bullet {
+  width: 1.8rem;
+  height: 1.8rem;
+  background: transparent;
+  margin: 0 0 0.8rem;
+  cursor: pointer;
+
+}
+.swiper-container .swiper-pagination .swiper-pagination-bullet-active svg .white-circle{
+  stroke: rgb(185, 181, 181);
+}
+.swiper-container .swiper-pagination .swiper-pagination-bullet-active:before {
+ width: 1.6rem;
+ height: 1.6rem;
+ 
+}
+.swiper-pagination-bullet-active .progress-ring {
+  animation: drawCircle 6s 0.5s linear;
+}
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
