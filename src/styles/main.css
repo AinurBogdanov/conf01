@@ -1,3 +1,6 @@
+body {
+  overflow: hidden;
+}
 .content {
   padding-top: 14.6rem;
 }
@@ -7,13 +10,13 @@
   left: 0;
   box-sizing: border-box;
   height: 100vh;
+  width: 100%;
   padding: 13.6rem 0 5rem 0;
 }
 .promo {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
 }
 .swiper-container {
   overflow: hidden;
@@ -29,8 +32,8 @@
 .swiper-slide {
   flex-shrink: 0;
   position: relative;
-  width: 1240;
-  margin-right: 20px;
+  width: 1240px;
+  margin-right: 0px;
   padding-bottom: 40.4%;
 }
 .promo_img {
@@ -55,4 +58,39 @@
   top: 0;
   left: 0;
   padding: 40px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.promo_link .btn {
+  margin-top: auto;
+}
+.swiper-container .swiper-pagination .swiper-pagination-bullet {
+  width: 1.8rem;
+  height: 1.8rem;
+  background: transparent;
+  margin: 0 0 0.8rem;
+  cursor: pointer;
+
+}
+.swiper-container .swiper-pagination .swiper-pagination-bullet-active svg .white-circle{
+  stroke: rgb(185, 181, 181);
+}
+.swiper-container .swiper-pagination .swiper-pagination-bullet-active:before {
+ width: 1.6rem;
+ height: 1.6rem;
+ 
+}
+.swiper-pagination-bullet-active .progress-ring {
+  animation: drawCircle 6s 0.5s linear;
+}
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
