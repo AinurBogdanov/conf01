@@ -9,6 +9,7 @@ export function initSwiper() {
   document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.swiper-container', {
     modules: [Pagination, Autoplay],
+
     direction: 'horizontal',
     loop:true,
     touchRatio: 0.6,
@@ -16,6 +17,7 @@ export function initSwiper() {
       delay: 5000,
       disableOnInteraction:false,
     },
+    
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -42,5 +44,9 @@ export function initSecondSwiper() {
   direction: 'horizontal',
   slidesPerView: 1,
   spaceBetween: 20,
+  pagination: {
+    el: '.swiper-pagination-fraction',
+    type: 'fraction',
+  }
  }) 
 }

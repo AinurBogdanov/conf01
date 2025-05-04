@@ -17,11 +17,11 @@ a {
   color: #25A4A1;
 }
 .main-lable-icon {
-  background-image: url(../assets/images/lable-icon-circle.svg);
+  background-image: url(../../assets/images/lable-icon-circle.svg);
   background-size:100%;
   background-repeat: no-repeat;
-  width: 3.4rem;
-  height: 3.4rem;
+  width: 3.5rem;
+  height: 3.5rem;
   position: absolute;
   left: 0;
   top: 0;
@@ -30,7 +30,8 @@ a {
   position:absolute;
   top: 50%;
   left: 50%;
-  transform:translate(-50%, -50%)
+  transform:translate(-50%, -50%);
+  width: 40%;
 }
 .main-categories__paginator {
   margin-left: 7.5rem;
@@ -46,7 +47,12 @@ a {
 
 }
 .swiper-slide {
-
+  transition: transform 0.5s ease, filter 0.5s ease; 
+}
+.swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.4;
+  transform: scale(0.9);
+  filter: grayscale(1);
 }
 
 .main-category {

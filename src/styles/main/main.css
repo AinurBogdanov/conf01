@@ -3,6 +3,7 @@ body {
   overflow: hidden;
   margin: 0;
   position: relative;
+  user-select: none;
 }
 .wrap-page {
   min-height: 100%;
