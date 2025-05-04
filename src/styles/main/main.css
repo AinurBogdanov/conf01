@@ -1,0 +1,44 @@
+body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+}
+.wrap-page {
+  min-height: 100%;
+}
+.wrap {
+  padding: 0 3rem;
+  width: 100%;
+  max-width: 130rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.content {
+  height: 100vh;
+  width: 100%;
+  padding-top: 14.6rem;
+}
+html._screen-scrolling .screen-scroll {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  padding: 13.6rem 0 5rem 0;
+  /* scroll-snap-align: start; */
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+} 
+html .screen-scroll.screen-scroll-scrollable {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 0;
+}
+
+/* html._screen-scrolling .screen-scroll.screen-scroll-active {
+  transform: translateY(0);
+}
+html._screen-scrolling .screen-scroll {
+  transform: translateY(100%); 
+}
+ */

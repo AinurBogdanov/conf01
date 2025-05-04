@@ -2,13 +2,7 @@
   position: fixed;
   width: 100%;
   z-index: 1000;
-}
-.wrap {
-  padding: 0 3rem;
-  width: 100%;
-  max-width: 130rem;
-  margin: 0 auto;
-  box-sizing: border-box;
+  background-color: white;
 }
 .header {
   display: flex;
@@ -17,6 +11,8 @@
   height: 10.6rem;
   font-size: 1.2rem;
   letter-spacing: -0.02em;
+  z-index: 1000;
+
 }
 .header .svg-icon {
   display: block;
@@ -28,7 +24,7 @@
   height: 6.9rem;
   min-width: 4.5rem;
   margin-top: -0.5rem;
-  background: url(../assets/images/header-logo.svg);
+  background: url(../../assets/images/header-logo.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

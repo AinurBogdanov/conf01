@@ -28,4 +28,3 @@ export function initScroll() {
     }
   })
 }
-console.log('loaded')
