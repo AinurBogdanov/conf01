@@ -1,9 +1,15 @@
 export function initScroll() {
-  let currentScreen = 0;
   const screens = document.querySelectorAll('.screen-scroll');
   const totalScreens = screens.length;
   let isScrolling = false;
   
+  let currentScreen = Array.from(screens).findIndex(screen => {
+    const rect = screen.getBoundingClientRect();
+    return rect.top <= window.innerHeight / 2 &&  rect.bottom >= window.innerHeight / 2;
+  });
+  
+  if (currentScreen === -1) currentScreen = 0;
+
   function scrollToScreen(index) {
     if (index < 0 || index >= totalScreens) return;
 
