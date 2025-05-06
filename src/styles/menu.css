@@ -1,6 +1,17 @@
 .breadcrumbs {
   margin-bottom: 36px;
   padding-top: 36px;
+  font-family: 'Futura PT Book';
+  font-weight: normal;
+}
+.page-heading {
+  height: 1px;
+  margin: 36px 0;  
+} 
+.breadcrumbs a {
+  font-family: 'Futura PT Book';
+  color: black;
+  font-size: 1.4rem; 
 }
 .catalog-nav-list {
   list-style: none;
@@ -9,7 +20,7 @@
 } 
 .catalog-nav-list li  {
   font-size: 1.8rem;
-  font-family: 'Futura PT BOOK', Arial;
+  font-family: 'Futura PT Book', Arial;
   font-weight: normal;
   letter-spacing: 0.045em;
   line-height: 110%;
