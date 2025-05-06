@@ -31,8 +31,7 @@ export function initScroll() {
     const scrollable = activeScreen.classList.contains('screen-scroll-scrollable')
     ? activeScreen
     : null;
-
-    console.log(scrollable);// not found 
+    
     if (scrollable) {
       const scrollTop = scrollable.scrollTop;
       const scrollHeight = scrollable.scrollHeight;

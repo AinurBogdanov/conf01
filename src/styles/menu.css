@@ -1,0 +1,44 @@
+.breadcrumbs {
+  margin-bottom: 36px;
+  padding-top: 36px;
+}
+.catalog-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+} 
+.catalog-nav-list li  {
+  font-size: 1.8rem;
+  font-family: 'Futura PT BOOK', Arial;
+  font-weight: normal;
+  letter-spacing: 0.045em;
+  line-height: 110%;
+}
+.catalog-nav > 
+.catalog-nav-list {
+  display: flex;
+}
+li > .catalog-nav-list {
+  padding: 0;
+}
+.nav-list-root > li {
+  margin-left: 3.5rem;
+}
+.nav-list-root :first-child {
+  margin-left: 0;
+}  
+.catalog-nav-list li {
+}
+
+li ul.catalog-nav-list li { 
+  margin-top: 2.2rem;
+}
+li a {
+  color: black;
+}
+.catalog-nav-category {
+   text-transform: uppercase;
+}
+.active {
+  color: #25A4A1;
+}

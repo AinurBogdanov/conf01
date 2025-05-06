@@ -1,6 +1,4 @@
-import { initSwiper,initSecondSwiper } from "./InitSwiper";
-import { initScroll } from "./initScroll";
+import { renderMain } from "./renderMain.js";
 
-initScroll();
-initSwiper();
-initSecondSwiper();
+// renderMain();
+
