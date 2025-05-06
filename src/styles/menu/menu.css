@@ -61,7 +61,8 @@ li a:hover {
   color: pink;
 }
 .catalog-nav-category {
-   text-transform: uppercase;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
 }
 .active {
   color: #25A4A1;
