@@ -1,22 +1,23 @@
 html {
   font-family: 'Futura PT Book', Arial, Helvetica, sans-serif;
   font-size: 62.5%;
-};
+  height: auto;
+}
 body {
   margin: 0;
-};
+}
 @font-face {
   font-family: 'Futura PT Book';
   src: url('../assets/fonts/Futura/futura_pt_book.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-};
+}
 @font-face {
   font-family: 'Century Schoolbook';
   src: url('../assets/fonts/CenturySchoolbook/century-schoolbook.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-};
+}
 

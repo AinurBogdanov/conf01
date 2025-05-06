@@ -3,6 +3,11 @@
   padding-top: 36px;
   font-family: 'Futura PT Book';
   font-weight: normal;
+  color: #4F5555;
+  text-transform: uppercase;
+  font-size: 1.4rem; 
+  line-height: 92%;
+  letter-spacing: 0.045em;
 }
 .page-heading {
   height: 1px;
@@ -10,8 +15,12 @@
 } 
 .breadcrumbs a {
   font-family: 'Futura PT Book';
-  color: black;
-  font-size: 1.4rem; 
+  
+  text-transform: uppercase;
+  color: #4F5555;
+}
+.catalog-nav {
+  margin: 36px 0;
 }
 .catalog-nav-list {
   list-style: none;
@@ -46,10 +55,15 @@ li ul.catalog-nav-list li {
 }
 li a {
   color: black;
+  transition: color 0.3s ease;
+}
+li a:hover {
+  color: pink;
 }
 .catalog-nav-category {
    text-transform: uppercase;
 }
 .active {
   color: #25A4A1;
+  pointer-events: none;
 }

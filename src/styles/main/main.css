@@ -1,12 +1,11 @@
 body {
-  height: 100%;
-  overflow: hidden;
+  height: auto;
   margin: 0;
   position: relative;
   user-select: none;
 }
 .wrap-page {
-  min-height: 100%;
+  height: auto;
 }
 .wrap {
   padding: 0 3rem;
@@ -16,7 +15,7 @@ body {
   box-sizing: border-box;
 }
 .content {
-  height: 100vh;
+  height: auto;
   width: 100%;
   padding-top: 14.6rem;
 }

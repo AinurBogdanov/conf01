@@ -105,6 +105,7 @@
   font-size: 1.6rem;
   height: 5.7rem;
   padding: 2rem 3rem;
+  position: relative;
   background-color: #25A4A1;
   color:white;
   text-decoration: none;
@@ -113,8 +114,9 @@
   border: 1px solid transparent;
   box-sizing: border-box;
   z-index: 100;
+  overflow: hidden;
 }
-.btn {}
+
 
 @media (min-width: 1024px) and (max-height: 800px) {
   .header {
