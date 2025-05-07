@@ -1,5 +1,6 @@
 import { renderMenuHTML } from "./menuJs/renderMenu";
 import { renderFooter } from "./footer/renderFooter";
+import { updateContent } from "./shered/shered";
 
 export function initNavLinks() {
   const links = document.querySelectorAll('.menu-item');
@@ -10,6 +11,7 @@ export function initNavLinks() {
 
 
       const url = link.querySelector('a').getAttribute('href');
+      
       const slug = url.split('/').filter(Boolean).pop();
 
       history.pushState({ slug }, '', url);
@@ -19,13 +21,3 @@ export function initNavLinks() {
   });
 };
 
-function updateContent(slug) {
-  const content = document.querySelector('.content');
-  const templates = {
-    catalog: renderMenuHTML()
-  };
-
-  content.innerHTML = templates[slug] || alert('no content was found');
-
-  renderFooter(document.body);
-};

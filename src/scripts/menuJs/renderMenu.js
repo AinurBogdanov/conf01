@@ -87,5 +87,6 @@ export function renderMenuHTML() {
   `;
   // catalogNavList.innerHTML = navCatalogHTML;
 
+  
   return menuHTML;
 }
