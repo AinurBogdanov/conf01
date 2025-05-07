@@ -42,7 +42,7 @@ export function renderMenuHTML() {
     category.subcategories.forEach((subcategory) => {
       subcategories += `
       <li>
-        <a href="#">${subcategory.title}</a>
+        <a href="/catalog/${subcategory.slug}">${subcategory.title}</a>
       </li>
       `
     });
