@@ -9,7 +9,6 @@ export function initNavLinks() {
     link.addEventListener('click', (e) => {
       e.preventDefault();
 
-
       const url = link.querySelector('a').getAttribute('href');
       
       const slug = url.split('/').filter(Boolean).pop();

@@ -29,11 +29,6 @@ const menuCategoryHTML = `
 `;
 
 export function renderMenuHTML() {
-  // const contentBox = document.querySelector('.content');
-  // contentBox.innerHTML = menuHTML;
-
-  // const catalogNavList = document.querySelector('.catalog-nav-list');
-
   let navCatalogHTML = '';
 
   menuData.menu.forEach((category) => {
@@ -85,8 +80,6 @@ export function renderMenuHTML() {
     </div>
   </div>
   `;
-  // catalogNavList.innerHTML = navCatalogHTML;
-
   
   return menuHTML;
 }

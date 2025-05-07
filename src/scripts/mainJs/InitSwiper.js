@@ -4,7 +4,6 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination'
 
-
 export function initSwiper() {
   document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.swiper-container', {
