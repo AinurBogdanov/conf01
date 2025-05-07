@@ -381,16 +381,13 @@ export function renderMain() {
 
       <div class="margin-top-104"></div>
   
-      <div class="footer-wrap">
-        <div class="wrap">
-        </div>
-      </div>
-
     </div>
 `
   content.innerHTML = mainHTML;
+  const footerLocation = document.querySelector('.screen-scroll-scrollable');
+
   initScroll();
   initSwiper();
   initSecondSwiper();
-  renderFooter();
+  renderFooter(footerLocation);
 }

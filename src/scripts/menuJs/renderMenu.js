@@ -1,5 +1,5 @@
 import menuData from '../../data/menuList.json' assert { type: 'json'};
-
+import { renderFooter } from '../footer/renderFooter';
 
 
 const menuCategoryHTML = `
@@ -86,4 +86,7 @@ export function renderMenuHTML() {
   })
 
   catalogNavList.innerHTML = navCatalogHTML;
+
+  const footerLocaton = document.body;
+  renderFooter(footerLocaton);
 }
