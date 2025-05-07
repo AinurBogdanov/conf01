@@ -1,4 +1,5 @@
 const footerHTML = `
+  <div class="margin-top156"></div>
   <div class="footer-wrap">
     <div class="wrap">
       <footer class="footer">
@@ -60,5 +61,7 @@ const footerHTML = `
   </div>
 `
 export function renderFooter(location) {
-  location.insertAdjacentHTML("beforeend", footerHTML);
+  if ( !document.querySelector('.footer-wrap')) {
+    location.insertAdjacentHTML("beforeend", footerHTML);
+  }
 }

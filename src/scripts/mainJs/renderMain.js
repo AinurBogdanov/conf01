@@ -328,7 +328,7 @@ export function renderMain() {
         <div class="full-wrap">
 
           <h1 class="about-us-title">
-            Волоконский 
+            Волконский 
           </h1>
 
           <div class="row">

@@ -29,38 +29,10 @@ const menuCategoryHTML = `
 `;
 
 export function renderMenuHTML() {
-  const contentBox = document.querySelector('.content');
-  const menuHTML = `    
-  <div class="wrap">
-    <div class="breadcrumbs">
-      <a href="#">Главная страница</a> 
-      • Пекарня
-    </div>
+  // const contentBox = document.querySelector('.content');
+  // contentBox.innerHTML = menuHTML;
 
-    <div class="catalog">
-      <div class="page-heading">
-        <h1></h1>
-      </div>
-      <div class="catalog-nav">
-        <ul class="catalog-nav-list nav-list-root">
-    
-        </ul>
-      </div>
-
-      <div class="catalog-list">
-      </div>
-
-      <div class="catalog-more">
-        <a href="#" class="btn btn-red">
-          Ещё товары
-        </a>
-      </div>
-    </div>
-  </div>
-  `;
-  contentBox.innerHTML = menuHTML;
-
-  const catalogNavList = document.querySelector('.catalog-nav-list');
+  // const catalogNavList = document.querySelector('.catalog-nav-list');
 
   let navCatalogHTML = '';
 
@@ -85,8 +57,35 @@ export function renderMenuHTML() {
     `
   })
 
-  catalogNavList.innerHTML = navCatalogHTML;
+  const menuHTML = `    
+  <div class="wrap">
+    <div class="breadcrumbs">
+      <a href="#">Главная страница</a> 
+      • Пекарня
+    </div>
 
-  const footerLocaton = document.body;
-  renderFooter(footerLocaton);
+    <div class="catalog">
+      <div class="page-heading">
+        <h1></h1>
+      </div>
+      <div class="catalog-nav">
+        <ul class="catalog-nav-list nav-list-root">
+          ${navCatalogHTML}
+        </ul>
+      </div>
+
+      <div class="catalog-list">
+      </div>
+
+      <div class="catalog-more">
+        <a href="#" class="btn btn-red">
+          Ещё товары
+        </a>
+      </div>
+    </div>
+  </div>
+  `;
+  // catalogNavList.innerHTML = navCatalogHTML;
+
+  return menuHTML;
 }
