@@ -1,5 +1,5 @@
 body {
-  height: auto;
+  height: 100vh;
   margin: 0;
   position: relative;
   user-select: none;
@@ -15,19 +15,19 @@ body {
   box-sizing: border-box;
 }
 .content {
-  height: auto;
+  height: 100%;
   width: 100%;
   padding-top: 14.6rem;
+}
+
+html._screen-scrolling {
+  overflow:hidden;
 }
 html._screen-scrolling .screen-scroll {
   box-sizing: border-box;
   height: 100vh;
   width: 100%;
   padding: 13.6rem 0 5rem 0;
-  /* scroll-snap-align: start; */
-  /* position: absolute;
-  top: 0;
-  left: 0; */
 } 
 html .screen-scroll.screen-scroll-scrollable {
   overflow-x: hidden;
