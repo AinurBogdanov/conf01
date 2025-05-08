@@ -1,6 +1,6 @@
-import { renderMenuHTML } from "./menuJs/renderMenu";
-import { renderFooter } from "./footer/renderFooter";
-import { updateContent } from "./shered/shered";
+import { renderMenuHTML } from "../menuJs/renderMenu";
+import { renderFooter } from "../footer/renderFooter";
+import { updateContent } from "./updateContent";
 
 export function initNavLinks() {
   const links = document.querySelectorAll('.menu-item');
@@ -15,7 +15,7 @@ export function initNavLinks() {
 
       history.pushState({ slug }, '', url);
 
-      updateContent(slug);
+      updateContent(slug, url);
     });
   });
 };

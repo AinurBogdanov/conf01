@@ -4,7 +4,7 @@
       "title": "Пекарня",
       "slug": "pekarnya",
       "subcategories": [
-        { "title": "Все", "slug": "vse" },
+        { "title": "Все", "slug": "pekarnya" },
         { "title": "Сладкая выпечка", "slug": "sladkaya-vypechka" },
         { "title": "Киши", "slug": "kishi" },
         { "title": "Пироги и пирожки", "slug": "pirogi-i-pirozhki" },
@@ -16,7 +16,7 @@
       "title": "Торты",
       "slug": "torty",
       "subcategories": [
-        { "title": "Все", "slug": "vse" },
+        { "title": "Все", "slug": "torty" },
         { "title": "Заказные торты", "slug": "zakaznye-torty" },
         { "title": "Готовые торты", "slug": "gotovye-torty" }
       ]
@@ -25,7 +25,7 @@
       "title": "Кондитерская",
       "slug": "konditerskaya",
       "subcategories": [
-        { "title": "Все", "slug": "vse" },
+        { "title": "Все", "slug": "konditerskaya" },
         { "title": "Пирожные", "slug": "pirozhnie" },
         { "title": "Десерты", "slug": "deserty" }
       ]
@@ -34,7 +34,7 @@
       "title": "Кухня",
       "slug": "kuhnya",
       "subcategories": [
-        { "title": "Все", "slug": "vse" },
+        { "title": "Все", "slug": "kuhnya" },
         { "title": "Горячие блюда", "slug": "goryachie-blyuda" },
         { "title": "Завтраки", "slug": "zavtraki" },
         { "title": "Салаты", "slug": "salaty" },
@@ -45,7 +45,7 @@
       "title": "Фуршетное меню",
       "slug": "fur-shet",
       "subcategories": [
-        { "title": "Все", "slug": "vse" },
+        { "title": "Все", "slug": "fur-shet" },
         { "title": "Канапе и салаты", "slug": "kanape-i-salaty" },
         { "title": "Шашлыки", "slug": "shashlyki" },
         { "title": "Круассаны и сэндвичи", "slug": "kruassany-i-sendvichi" },
@@ -57,7 +57,7 @@
       "title": "Предзаказ за 72 часа",
       "slug": "predzakaz-72h",
       "subcategories": [
-        { "title": "Все", "slug": "vse" },
+        { "title": "Все", "slug": "predzakaz-72h" },
         { "title": "Пирожки на заказ", "slug": "pirozhki-na-zakaz" },
         { "title": "Каравай на заказ", "slug": "karavay-na-zakaz" },
         { "title": "Кулебяки на заказ", "slug": "kulebyaki-na-zakaz" },
@@ -68,14 +68,14 @@
       "title": "Напитки",
       "slug": "napitki",
       "subcategories": [
-        { "title": "Все", "slug": "vse" }
+        { "title": "Все", "slug": "napitki" }
       ]
     },
     {
       "title": "Заказные торты, предзаказ за 48 часов",
       "slug": "zakaznye-torty-48h",
       "subcategories": [
-        { "title": "Все", "slug": "vse" }
+        { "title": "Все", "slug": "zakaznye-torty-48h" }
       ]
     }
   ]

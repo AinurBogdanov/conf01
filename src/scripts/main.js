@@ -1,13 +1,17 @@
 import { renderMain } from "./mainJs/renderMain";
-import { initNavLinks } from "./navBar";
-import { updateContent } from "./shered/shered";
+import { initNavLinks } from "./shered/navBar";
+import { updateContent } from "./shered/updateContent";
 
+// deciding what content to show
 const  curentPath = window.location.pathname;
   if (curentPath === '/') {
     renderMain();
   } else {
-    const slug = curentPath.replace('/', '').replace('/', '');
-    updateContent(slug);
-  }
+    const url = curentPath;
+    const slug = curentPath.split('/').filter(Boolean).pop();
+    // slug is the key word which will hint us what to show to user
+    console.log(url);
+    updateContent(slug, url);
+  };
 
 initNavLinks();

@@ -50,7 +50,7 @@ export function renderMenuHTML() {
         </ul>
       </li>
     `
-  })
+  });
 
   const menuHTML = `    
   <div class="wrap">
