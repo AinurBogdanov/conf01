@@ -1,6 +1,4 @@
 import menuData from '../../data/menuList.json' assert { type: 'json'};
-import { renderFooter } from '../footer/renderFooter';
-
 
 const menuCategoryHTML = `
   <li>
