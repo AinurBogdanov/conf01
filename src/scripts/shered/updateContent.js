@@ -1,8 +1,14 @@
 import { renderMenuHTML } from "../menuJs/renderMenu.js";
 import { renderFooter } from "../footer/renderFooter.js";
+import { renderMain } from "../mainJs/renderMain.js";
 
 export function updateContent(slug, url) {
   const content = document.querySelector('.content');
+  if (url === '/') {
+    renderMain();
+    return;
+  };
+
   const templates = {
     pekarnya: renderMenuHTML(),
     torty: renderMenuHTML(),
