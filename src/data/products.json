@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Чиабатта",
+    "price": 220,
+    "category": "pekarnya",
+    "subcategory": "bread",
+    "unit": "шт.",
+    "image": "product-image1.jpg",
+    "url": "/catalog/product/chiabatta"
+  },
+  {
+    "id": 2,
+    "title": "Хлеб мультизерновой",
+    "price": 880,
+    "category": "pekarnya",
+    "subcategory": "bread",
+    "unit": "шт.",
+    "image": "product-image2.jpg",
+    "url": "/catalog/product/khleb-multizernovoy"
+  },
+  {
+    "id": 3,
+    "title": "Круассан с ростбифом",
+    "price": 495,
+    "category": "pekarnya",
+    "subcategory": "croissants",
+    "unit": "шт.",
+    "image": "product-image3.webp",
+    "url": "/catalog/product/kruassan-s-rostbifom"
+  },
+  {
+    "id": 4,
+    "title": "Киш с курицей и перцем",
+    "price": 425,
+    "category": "pekarnya",
+    "subcategory": "quiches",
+    "unit": "шт.",
+    "image": "product-image4.webp",
+    "url": "/catalog/product/kish-s-kuricey-i-percem"
+  },
+  {
+    "id": 5,
+    "title": "Киш с красной рыбой и брокколи",
+    "price": 495,
+    "category": "pekarnya",
+    "subcategory": "quiches",
+    "unit": "шт.",
+    "image": "product-image5.jpg",
+    "url": "/catalog/product/kish-s-ryboy-i-brokkoli"
+  },
+  {
+    "id": 6,
+    "title": "Кекс Столичный",
+    "price": 195,
+    "category": "pekarnya",
+    "subcategory": "cakes",
+    "unit": "шт.",
+    "image": "product-image6.jpg",
+    "url": "/catalog/product/keks-stolichniy"
+  },
+  {
+    "id": 7,
+    "title": "Ромовая баба в тёмном шоколаде",
+    "price": 195,
+    "category": "pekarnya",
+    "subcategory": "babas",
+    "unit": "шт.",
+    "image": "product-image7.jpg",
+    "url": "/catalog/product/romovaya-baba-temniy-shokolad"
+  },
+  {
+    "id": 8,
+    "title": "Ромовая баба в сырном креме",
+    "price": 220,
+    "category": "pekarnya",
+    "subcategory": "babas",
+    "unit": "шт.",
+    "image": "product-image8.jpg",
+    "url": "/catalog/product/romovaya-baba-sirniy-krem"
+  },
+  {
+    "id": 9,
+    "title": "Ватрушка Венгерская",
+    "price": 295,
+    "category": "pekarnya",
+    "subcategory": "pastries",
+    "unit": "шт.",
+    "image": "product-image9.jpg",
+    "url": "/catalog/product/vatrushka-vengerskaya"
+  },
+  {
+    "id": 10,
+    "title": "Калач московский",
+    "price": 145,
+    "category": "pekarnya",
+    "subcategory": "bread",
+    "unit": "шт.",
+    "image": "product-image10.jpg",
+    "url": "/catalog/product/kalach-moskovskiy"
+  },
+  {
+    "id": 11,
+    "title": "Хлеб Пушкинский ржано-пшеничный",
+    "price": 880,
+    "category": "pekarnya",
+    "subcategory": "bread",
+    "unit": "шт.",
+    "image": "product-image11.jpg",
+    "url": "/catalog/product/khleb-pushkinskiy-rzhano-pshenichniy"
+  },
+  {
+    "id": 12,
+    "title": "Хлеб Рижский подовый",
+    "price": 490,
+    "category": "pekarnya",
+    "subcategory": "bread",
+    "unit": "шт.",
+    "image": "product-image12.jpg",
+    "url": "/catalog/product/khleb-rizhkiy-podoviy"
+  }
+]

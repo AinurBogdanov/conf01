@@ -26,7 +26,7 @@ const menuCategoryHTML = `
   </li>
 `;
 
-export function renderMenuHTML() {
+export function navMenuHTML() {
   let navCatalogHTML = '';
 
   menuData.menu.forEach((category) => {
