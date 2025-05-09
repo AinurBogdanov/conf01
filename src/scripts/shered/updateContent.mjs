@@ -79,8 +79,8 @@ function renderCatalog(data) {
     `
   })
 
-
   productsCont.innerHTML = productsHTML;
+  renderFooter(document.body);
 }  
 
   // const content = document.querySelector('.content');
