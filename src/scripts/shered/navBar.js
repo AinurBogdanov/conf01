@@ -11,7 +11,7 @@ export function initHistory(links) {
     link.addEventListener('click', (e) => {
       e.preventDefault();
  
-      const url = link.getAttribute('href');
+            const url = link.getAttribute('href');
       const slug = url.split('/').filter(Boolean).pop();
  
       history.pushState({ slug }, '', url);

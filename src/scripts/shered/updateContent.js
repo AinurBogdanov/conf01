@@ -15,12 +15,12 @@ export function updateContent(slug, url) {
   const templates = {
     pekarnya: renderMenuHTML(),
     torty: renderMenuHTML(),
-    konditerskaya: '',
-    kuhnya: '',
-    ['fur-shet']: '',
-    ['predzakaz-72h']: '',
-    ['napitki']: '',
-    ['zakaznye-torty-48h']: ''
+    konditerskaya: renderMenuHTML(),
+    kuhnya: renderMenuHTML(),
+    ['fur-shet']: renderMenuHTML(),
+    ['predzakaz-72h']: renderMenuHTML(),
+    ['napitki']: renderMenuHTML(),
+    ['zakaznye-torty-48h']: renderMenuHTML()
   };
   
   if (templates[slug] === '') {

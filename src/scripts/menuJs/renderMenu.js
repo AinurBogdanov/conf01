@@ -32,12 +32,21 @@ export function renderMenuHTML() {
   menuData.menu.forEach((category) => {
     let subcategories = '';
 
-    category.subcategories.forEach((subcategory) => {
-      subcategories += `
-      <li>
-        <a href="/catalog/${subcategory.slug}">${subcategory.title}</a>
-      </li>
-      `
+    category.subcategories.forEach((subcategory, index) => {
+      if (index === 0) {
+        subcategories += `
+          <li>
+            <a href="/catalog/${subcategory.slug}">${subcategory.title}</a>
+          </li>
+        `
+      } else {
+        subcategories += `
+          <li>
+            <a href="/catalog/${category.slug}/${subcategory.slug}">${subcategory.title}</a>
+          </li>
+        `
+      }
+
     });
 
     navCatalogHTML += `
