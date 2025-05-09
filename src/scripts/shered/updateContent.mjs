@@ -19,19 +19,22 @@ export function handleRouteChange() {
   const path = window.location.pathname; 
   const parts = path.split('/').filter(Boolean);
 
+  if (!parts[0]) {
+    document.querySelector('html').classList.add('_screen-scrolling');
+    renderMain();
+    return;
+  } 
 
-
-  if (parts[1] === 'pekarnya' && !parts[2]) {
+  if (parts[0]) {
     document.querySelector('html').classList.remove('_screen-scrolling');
-
-    const category = parts[1];
-    const subcategory = parts[2] || null;
-  
-    fetchDataAndRender(category, subcategory);
   }
+    
+  const category = parts[1];
+  const subcategory = parts[2] || null;
+
+  fetchDataAndRender(category, subcategory);
 
   const link = document.querySelector(`.catalog-nav-list a[href="${path}"]`);
-
   link.classList.add('active');
 };
   
