@@ -9,6 +9,7 @@ const imageMap = import.meta.glob('../../assets/images/products-images/*.{jpg,jp
   import: 'default',
 });
 const resolvedImages = {};
+
 for (const [path, value] of Object.entries(imageMap)) {
   const fileName = path.split('/').pop(); // product-image1.jpg
   resolvedImages[fileName] = value;
