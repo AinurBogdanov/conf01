@@ -20,6 +20,8 @@ export function handleRouteChange() {
   const parts = path.split('/').filter(Boolean);
 
   if (parts[0] === 'catalog') {
+    document.querySelector('html').classList.remove('_screen-scrolling');
+
     const category = parts[1];
     const subcategory = parts[2] || null;
   

@@ -29,7 +29,7 @@ html._screen-scrolling .screen-scroll {
   width: 100%;
   padding: 13.6rem 0 5rem 0;
 } 
-html .screen-scroll.screen-scroll-scrollable {
+html._screen-scrolling .screen-scroll.screen-scroll-scrollable {
   overflow-x: hidden;
   overflow-y: auto;
   padding-bottom: 0;
