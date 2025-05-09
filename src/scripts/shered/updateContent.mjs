@@ -19,7 +19,9 @@ export function handleRouteChange() {
   const path = window.location.pathname; 
   const parts = path.split('/').filter(Boolean);
 
-  if (parts[0] === 'catalog') {
+
+
+  if (parts[1] === 'pekarnya' && !parts[2]) {
     document.querySelector('html').classList.remove('_screen-scrolling');
 
     const category = parts[1];
@@ -27,6 +29,10 @@ export function handleRouteChange() {
   
     fetchDataAndRender(category, subcategory);
   }
+
+  const link = document.querySelector(`.catalog-nav-list a[href="${path}"]`);
+
+  link.classList.add('active');
 };
   
 function fetchDataAndRender(category, subcategory) {
