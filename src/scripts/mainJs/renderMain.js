@@ -391,6 +391,5 @@ export function renderMain() {
   initSecondSwiper();
   const footerLocation = document.querySelector('.screen-scroll-scrollable');
   renderFooter(footerLocation);
-  
-  return initScroll();
+  initScroll();
 }

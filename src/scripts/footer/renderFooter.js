@@ -61,7 +61,11 @@ const footerHTML = `
   </div>
 `
 export function renderFooter(location) {
-  if ( !document.querySelector('.footer-wrap')) {
-    location.insertAdjacentHTML("beforeend", footerHTML);
+  let isFooter =  document.querySelector('.footer-wrap');
+  if ( isFooter ) {
+    isFooter.remove();
   }
+  location.insertAdjacentHTML("beforeend", footerHTML);
+    
+  console.log(location)
 }
