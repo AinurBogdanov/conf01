@@ -66,6 +66,4 @@ export function renderFooter(location) {
     isFooter.remove();
   }
   location.insertAdjacentHTML("beforeend", footerHTML);
-    
-  console.log(location)
 }

@@ -1,7 +1,6 @@
 import { navMenuHTML } from "../menuJs/renderMenu.js";
 import { renderFooter } from "../footer/renderFooter.js";
 import { renderMain } from "../mainJs/renderMain.js";
-import { initHistory } from "./navBar.js";
 import  data from '../../data/products.json';
 import { cleanUpScroll } from "../mainJs/initScroll.js";
 
@@ -15,6 +14,7 @@ for (const [path, value] of Object.entries(imageMap)) {
   const fileName = path.split('/').pop(); // product-image1.jpg
   resolvedImages[fileName] = value;
 }
+const container = document.querySelector('.content');
 
 export function handleRouteChange() {
   const path = window.location.pathname; 
@@ -30,17 +30,22 @@ export function handleRouteChange() {
     document.querySelector('html').classList.remove('_screen-scrolling');
     cleanUpScroll();
   }
-    
+
+  if (parts[0] === 'address') {
+    console.log('render adress')
+     container.innerHTML = '';
+    return
+  } 
+  if (parts[0] === 'catalog') {
+    fetchCatalog(parts);
+    console.log('render catalog')
+  }  
+};
+  
+function fetchCatalog(parts) {
   const category = parts[1];
   const subcategory = parts[2] || null;
 
-  fetchDataAndRender(category, subcategory);
-
-  const link = document.querySelector(`.catalog-nav-list a[href="${path}"]`);
-  link.classList.add('active');
-};
-  
-function fetchDataAndRender(category, subcategory) {
   const endpoint = subcategory
   ? `/api/catalog/${category}/${subcategory}`
   : `/api/catalog/${category}`;
@@ -50,14 +55,13 @@ function fetchDataAndRender(category, subcategory) {
   //   .then(data => {
   //     renderCatalog(data);
   //   })
-  
   renderCatalog(data)
 }
   
 function renderCatalog(data) {
-  const container = document.querySelector('.content');
   container.innerHTML = navMenuHTML();
 
+  const path = window.location.pathname; 
   const productsCont = document.querySelector('.catalog-list')
 
   let productsHTML = ''
@@ -90,6 +94,9 @@ function renderCatalog(data) {
     `
   })
 
+  const link = document.querySelector(`.catalog-nav-list a[href="${path}"]`);
+  link.classList.add('active');
+  
   productsCont.innerHTML = productsHTML;
   renderFooter(document.body);
 }
