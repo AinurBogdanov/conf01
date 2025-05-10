@@ -35,6 +35,11 @@ html._screen-scrolling .screen-scroll.screen-scroll-scrollable {
   padding-bottom: 0;
 }
 
+#map {
+  width: 100%;
+  height: 500px;
+}
+
 /* html._screen-scrolling .screen-scroll.screen-scroll-active {
   transform: translateY(0);
 }
