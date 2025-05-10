@@ -1,21 +1,22 @@
-import { renderMain } from "./mainJs/renderMain";
-import { initNavLinks } from "./shered/navBar";
-import { handleRouteChange } from "./shered/updateContent.mjs";
-import './address/map'
+// import { renderMain } from "./mainJs/renderMain";
+// import { initNavLinks } from "./shered/navBar";
+// import { handleRouteChange } from "./shered/updateContent.mjs";
+import './address/addresMain'
 
-// deciding what content to show
-const  curentPath = window.location.pathname;
-let cleanUpScroll = () => {};
 
-if (curentPath === '/') {
-  cleanUpScroll = renderMain();
-} else {
-  handleRouteChange();
-};
+// // deciding what content to show
+// const  curentPath = window.location.pathname;
+// let cleanUpScroll = () => {};
 
-initNavLinks();
-initPopstate();
+// if (curentPath === '/') {
+//   cleanUpScroll = renderMain();
+// } else {
+//   handleRouteChange();
+// };
 
-function initPopstate() {
-  window.addEventListener('popstate', handleRouteChange
-);}
+// initNavLinks();
+// initPopstate();
+
+// function initPopstate() {
+//   window.addEventListener('popstate', handleRouteChange
+// );}

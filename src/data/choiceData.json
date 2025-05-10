@@ -1,0 +1,39 @@
+{
+  "metro_stations": [
+    {
+      "value": "arbatskaya",
+      "label": "Арбатская",
+      "icon": "arbatskaya.svg"
+    },
+    {
+      "value": "barrikadnaya",
+      "label": "Баррикадная",
+      "icon": "barrikadnaya.svg"
+    },
+    {
+      "value": "voykovskaya",
+      "label": "Войковская",
+      "icon": "voykovskaya.svg"
+    },
+    {
+      "value": "dinamo",
+      "label": "Динамо",
+      "icon": "dinamo.svg"
+    },
+    {
+      "value": "kievskaya",
+      "label": "Киевская",
+      "icon": "kievskaya.svg"
+    },
+    {
+      "value": "krilatskoe",
+      "label": "Киевская",
+      "icon": "kievskaya.svg"
+    },
+    {
+      "value": "voikovskay",
+      "label": "Киевская",
+      "icon": "kievskaya.svg"
+    }
+  ]
+}

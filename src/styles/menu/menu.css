@@ -10,8 +10,14 @@
   letter-spacing: 0.045em;
 }
 .page-heading {
-  height: 1px;
-  margin: 36px 0;  
+  font-family: 'Century Schoolbook', Arial, Helvetica, sans-serif;
+  font-size: 6.4rem;
+  line-height: 92.21%;
+  letter-spacing: -0.02em;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36px;
+  margin-bottom: 36px;
 } 
 .breadcrumbs a {
   font-family: 'Futura PT Book';

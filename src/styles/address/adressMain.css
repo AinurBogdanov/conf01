@@ -1,0 +1,30 @@
+.address-row {
+  display: flex;
+  justify-content: space-between;
+}
+.page-heading h1 {
+    font-weight: 400;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    margin: 0;
+    padding: 0;
+}
+.tabs-toggler {
+  padding: 1.4rem 6rem;
+  height: fit-content;
+}
+
+.address-filter-metro {
+  display: flex;
+  width: 30%;
+}
+.choices {
+  width: 100%;
+}
+.choices .choices__inner {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+}
