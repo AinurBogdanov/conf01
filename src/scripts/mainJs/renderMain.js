@@ -382,12 +382,15 @@ export function renderMain() {
       <div class="margin-top-104"></div>
   
     </div>
-`
+  `
   content.innerHTML = mainHTML;
-  const footerLocation = document.querySelector('.screen-scroll-scrollable');
 
-  initScroll();
+
+
   initSwiper();
   initSecondSwiper();
+  const footerLocation = document.querySelector('.screen-scroll-scrollable');
   renderFooter(footerLocation);
+  
+  return initScroll();
 }

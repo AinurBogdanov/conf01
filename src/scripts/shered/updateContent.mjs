@@ -3,6 +3,7 @@ import { renderFooter } from "../footer/renderFooter.js";
 import { renderMain } from "../mainJs/renderMain.js";
 import { initHistory } from "./navBar.js";
 import  data from '../../data/products.json';
+import { cleanUpScroll } from "../mainJs/initScroll.js";
 
 const imageMap = import.meta.glob('../../assets/images/products-images/*.{jpg,jpeg,png,webp}', {
   eager: true,
@@ -23,10 +24,11 @@ export function handleRouteChange() {
     document.querySelector('html').classList.add('_screen-scrolling');
     renderMain();
     return;
-  } 
+  }
 
   if (parts[0]) {
     document.querySelector('html').classList.remove('_screen-scrolling');
+    cleanUpScroll();
   }
     
   const category = parts[1];
@@ -90,45 +92,5 @@ function renderCatalog(data) {
 
   productsCont.innerHTML = productsHTML;
   renderFooter(document.body);
-}  
-
-  // const content = document.querySelector('.content');
-  // if (url === '/') {
-  //   renderMain();
-  //   return;
-  // };
-
-  // const templates = {
-  //   pekarnya: renderMenuHTML(),
-  //   torty: renderMenuHTML(),
-  //   konditerskaya: renderMenuHTML(),
-  //   kuhnya: renderMenuHTML(),
-  //   ['fur-shet']: renderMenuHTML(),
-  //   ['predzakaz-72h']: renderMenuHTML(),
-  //   ['napitki']: renderMenuHTML(),
-  //   ['zakaznye-torty-48h']: renderMenuHTML()
-  // };
-  
-  // if (templates[slug] === '') {
-  //   content.innerHTML = templates[slug];
-  // } else if (!templates[slug]) {
-  //   console.log('falsy value was given');
-  //   return
-  // } 
-
-  // content.innerHTML = templates[slug];
-
-  // const navLinks = document.querySelectorAll('.catalog-nav a');
-  // initHistory(navLinks);
-
-
-  //mark as active
-
-  // const link = document.querySelector(`.catalog-nav-list a[href="${url}"]`);
-
-  // link.classList.add('active');
-
-
-  // renderFooter(document.body);
-
+}
 
