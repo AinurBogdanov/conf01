@@ -1,6 +1,6 @@
 // 6da9318b-b941-4543-8438-2c5dc690c064\
 
-function loadYandexMaps() {
+export function loadYandexMaps() {
   const API_KEY = '6da9318b-b941-4543-8438-2c5dc690c064'
   const script = document.createElement('script');
 
@@ -19,7 +19,7 @@ function loadYandexMaps() {
 function createMap() {
  ymaps.ready(() => {
     try {
-      const map = new ymaps.Map('map', {
+      const map = new ymaps.Map('ymap', {
         center: [55.751574, 37.573856], // Москва
         zoom: 12,
         controls: ['zoomControl', 'typeSelector']

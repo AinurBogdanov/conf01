@@ -3,6 +3,7 @@ import { renderFooter } from "../footer/renderFooter.js";
 import { renderMain } from "../mainJs/renderMain.js";
 import  data from '../../data/products.json';
 import { cleanUpScroll } from "../mainJs/initScroll.js";
+import { renderAddres } from "../address/addresMain.js";
 
 const imageMap = import.meta.glob('../../assets/images/products-images/*.{jpg,jpeg,png,webp}', {
   eager: true,
@@ -32,8 +33,9 @@ export function handleRouteChange() {
   }
 
   if (parts[0] === 'address') {
-    console.log('render adress')
-     container.innerHTML = '';
+    renderAddres();
+    renderFooter(document.body);
+    console.log('addres rendered')
     return
   } 
   if (parts[0] === 'catalog') {
