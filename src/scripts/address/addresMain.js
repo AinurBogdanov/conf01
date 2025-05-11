@@ -54,7 +54,9 @@ function initSelect() {
         choice: function(classNames, data) {
           return template(`
             <div class="custom-choice"
-            data-choice ${data.disabled ? 'data-choice-disabled aria-disabled="true"' : 'data-choice-selectable'} data-id="${data.id}" ">
+              data-choice ${data.disabled ? 'data-choice-disabled aria-disabled="true"' : 'data-choice-selectable'} 
+              data-id="${data.id}"
+            >
             <div style="background-color:${data.customProperties.color};"
               class="metro-icon" alt="${data.label}"></div>         
               <span>${data.label}</span>
@@ -62,10 +64,11 @@ function initSelect() {
           `);
         },
         item: function(classNames, data) {
+          console.log(data.active)
           return template(`
-            <div class="${classNames.item} custom-choice" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''} ${data.disabled ? 'aria-disabled="true"' : ''}>
+            <div class="custom-choice" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''} ${data.disabled ? 'aria-disabled="true"' : ''}>
               <div style="background-color: ${data.customProperties.color};"
-              class="metro-icon" alt="${data.label}"></div>         
+              class="metro-icon"></div>         
               <span>${data.label}</span>
             </div>
           `);

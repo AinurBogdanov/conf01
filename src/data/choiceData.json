@@ -1,6 +1,13 @@
 {
   "metro_stations": [
     {
+      "value": "Все",
+      "lable": "Все",
+       "customProperties": {
+        "color": "rgb(255,255,255)"
+      }
+    },
+    {
       "value": "arbatskaya",
       "label": "Арбатская",
       "customProperties": {

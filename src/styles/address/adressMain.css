@@ -19,44 +19,6 @@
   padding: 1.4rem 6rem;
   height: fit-content;
 }
-
-.address-filter-metro {
-  display: flex;
-  width: 40%;
-
-}
-.choices {
-  width:70%
-}
-.choices .choices__inner {
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid black;
-}
-.control-lable {
-  width: 30%;
-  height: 100%;
-}
-.control-lable{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  color: gray;
-  letter-spacing: 0.09rem;
-}
-.metro-icon {
-  background-image: url('../../assets/images/metro-image.svg');
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 1.5rem;
-  background-repeat: no-repeat;
-  background-size: 45%;
-  background-position: center; 
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .map-container {
   height: 56rem;
   margin-top: 3.6rem;
