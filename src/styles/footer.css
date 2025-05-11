@@ -1,22 +1,26 @@
-
 .footer-wrap {
   background-color: #F9F9F9;
   position: relative;
 }
-.footer {
-  /* position: relative; */
+.footer a {
+  transition: color 0.5s ease;
+}
+.footer a:hover {
+  color: #25A4A1;
 }
 .foot {
   display: flex;
   padding-left: 150px;
+  position: relative;
 }
 .footer-logo {
   width: 4rem;
   height: 5.1rem;
-  background: url(../../assets/images/header-logo.svg);
+  background: url(/images/shered-images/header-logo.svg);
   background-size: cover;
   position: absolute;
   margin-top: 5rem;
+  left: 4rem;
 }
 .footer-sitemap {
   display: flex;
@@ -27,16 +31,14 @@
 }
 .footer-sitemap a { 
   color: black;
+  width: fit-content;
 }
-.footer-sitemap.info a {
+.footer-sitemap.info div {
   padding-bottom: 2.5rem;
 }
 .footer-sitemap.info.padding-left {
   padding-left: 2rem;
 }
-.footer-sitemap-two {
-  padding-top: 2rem;
-} 
 .footer-social {
   position: absolute;
   right: 0;
@@ -59,10 +61,17 @@
 }
 .footer-social a svg,
 .footer-social a img {
-  width: 50%;
+  width: 38%;
+  height: 100%;
 }
 .footer-social a svg {
   fill: rgb(136, 136, 136, 1);
+}
+.footer-social a:hover {
+  background-color: rgba(167, 166, 166, 0.815);
+}
+.footer-social a:hover svg {
+  fill: white;
 }
 
 .footer-links {

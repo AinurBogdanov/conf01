@@ -3,26 +3,27 @@ const footerHTML = `
   <div class="footer-wrap">
     <div class="wrap">
       <footer class="footer">
-        <div class="footer-logo"></div>
-        <div class="foot">
-          <div class="footer-sitemap">Кондитерская</div>
-          <div class="footer-sitemap">Кухня</div>
-          <div class="footer-sitemap">Пекарня</div>
-          <div class="footer-sitemap">фуршетноу меню</div>
-          <div class="footer-sitemap">Напитки</div>
-          <div class="footer-sitemap info">
-            <a href="#">Адреса магазинов</a>
-            <a href="#">Условия доставки</a>
-            <a href="#">Клубная программа</a>
-            <a href="#">Мобильное приложение</a>
+      <div class="foot">
+      <div class="footer-logo"></div>
+          <div class="footer-sitemap">
+          <a href="#">Кондитерская</a>
           </div>
-          <div class="footer-sitemap info padding-left">
-            <a href="#">Обратная связь</a>
-            <a href="#">Контакты</a>
-            
-              <a href="#">+7 495 183 87 58</a>
-              <a href="#">salesmsk@wolkonsky.ru</a>
-        
+          <div class="footer-sitemap"><a href="#">Кухня</a></div>
+          <div class="footer-sitemap"><a href="#">Пекарня</a></div>
+          <div class="footer-sitemap"><a href="#">фуршетноу меню</a></div>
+          <div class="footer-sitemap"><a href="#">Напитки</a></div>
+          <div class="footer-sitemap info">
+            <div><a href="#">Адреса магазинов</a></div>
+            <div><a href="#">Условия доставки</a></div>
+            <div><a href="#">Клубная программа</a></div>
+            <div><a href="#">Мобильное приложение</a></div>
+          </div>
+          <div class="footer-sitemap info padding-left"> 
+              <div><a href="#">Обратная связь</a></div>
+              <div><a href="#">Контакты</a></div>
+              
+              <div><a href="#">+7 495 183 87 58</a></div>
+              <div><a href="#">salesmsk@wolkonsky.ru</a></div>
           </div>
         </div>
 
@@ -38,14 +39,14 @@ const footerHTML = `
             </svg>
           </a>
           <a class="footer-social-wha" href="#">                  
-              <img src="./src/assets/images/wha2.svg" alt="">
+              <img src="/images/footer-images/wha2.svg" alt="">
           </a>
         </div>
         <div class="footer-links-cont">
           <div class="footer-links">
             <div class="footer-links-pay">
-              <img src="./src/assets/images/footer-images/pay.png" alt="img">
-              <img class="sbp" src="./src/assets/images/footer-images/sbp.png" alt="img">
+              <img src="/images/footer-images/pay.png" alt="img">
+              <img class="sbp" src="/images/footer-images/sbp.png" alt="img">
             </div>
             <div class="footer-adtional">
               <div class="rights">© 2025 «Волконский» | Все права защищены.</div>
@@ -66,4 +67,14 @@ export function renderFooter(location) {
     isFooter.remove();
   }
   location.insertAdjacentHTML("beforeend", footerHTML);
+  
+  const btn = document.querySelector('.footer-social-wha');
+  const img = btn.querySelector('img');
+  
+  btn.addEventListener('mouseover', () => {
+    img.src = '/images/footer-images/wha3.svg';
+  });
+  btn.addEventListener('mouseout', () => {
+    img.src = '/images/footer-images/wha2.svg';
+  });
 }
