@@ -3,37 +3,44 @@
     {
       "value": "arbatskaya",
       "label": "Арбатская",
-      "icon": "arbatskaya.svg"
+      "customProperties": {
+        "color": "#0078BE"
+      }
     },
     {
       "value": "barrikadnaya",
       "label": "Баррикадная",
-      "icon": "barrikadnaya.svg"
+      "customProperties": {
+        "color": "#800080"
+      }
     },
     {
       "value": "voykovskaya",
       "label": "Войковская",
-      "icon": "voykovskaya.svg"
+      "customProperties": {
+        "color": "#2DBE2C"
+      }
     },
     {
       "value": "dinamo",
       "label": "Динамо",
-      "icon": "dinamo.svg"
+      "customProperties": {
+        "color": "#2DBE2C"
+      }
     },
     {
       "value": "kievskaya",
       "label": "Киевская",
-      "icon": "kievskaya.svg"
+      "customProperties": {
+        "color": "#0078BE"
+      }
     },
     {
       "value": "krilatskoe",
       "label": "Киевская",
-      "icon": "kievskaya.svg"
-    },
-    {
-      "value": "voikovskay",
-      "label": "Киевская",
-      "icon": "kievskaya.svg"
+      "customProperties": {
+        "color": "#0078BE"
+      }
     }
   ]
 }

@@ -2,33 +2,48 @@ import Choices from "choices.js";
 import 'choices.js/public/assets/styles/choices.min.css';
 import choiceData from '../../data/choiceData.json';
 
-const stations = choiceData.metro_stations.map(station => ({
-  value: station.value,
-  label: station.label,
-  icon: station.icon
-}));
-
 const metroSelect = document.querySelector('#metro_select');
-// const defaultSelectedValue = metroSelect.querySelector('[selected]').value;
 
 const choices = new Choices(metroSelect, {
-  choices: stations,
-  searchEnabled: true,
+  choices: choiceData.metro_stations,
+  searchEnabled: false,
   placeholder: true,
-  // shouldSort: true, // Включаем сортировку
-  // sorter: (a, b) => {
-  //   if (a.value === defaultSelectedValue) return -1;
-  //   if (b.value === defaultSelectedValue) return 1;
-    
-  //   return a.label.localeCompare(b.label);
-  // },
-  choiceTemplate: (choice) => {
-    return `
-      <div class="custom-choice">
-        <img src="../../assets/images/metro-images/metro-image-${choice.value}" alt="${choice.label}" class="metro-icon">
-        <span>${choice.label}</span>
-      </div>
-    `
+  shouldSort: false,
+  // shouldCloseDropdown: false,
+  callbackOnCreateTemplates: function(template) {
+    return {
+      choice: function(classNames, data) {
+        console.log(data)
+        console.log()
+        return template(`
+          <div class="custom-choice"
+          data-choice ${data.disabled ? 'data-choice-disabled aria-disabled="true"' : 'data-choice-selectable'} data-id="${data.id}" ">
+          <div style="background-color:${data.customProperties.color};"
+            class="metro-icon" alt="${data.label}"></div>         
+            <span>${data.label}</span>
+          </div>
+        `);
+      },
+      item: function(classNames, data) {
+        console.log(data.value)
+        return template(`
+          <div class="${classNames.item} custom-choice" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''} ${data.disabled ? 'aria-disabled="true"' : ''}>
+            <div style="background-color: ${data.customProperties.color};"
+            class="metro-icon" alt="${data.label}"></div>         
+            <span>${data.label}</span>
+          </div>
+        `);
+      }
+    };
   }
 });
 
+document.addEventListener('click', function (event) {
+  const dropdown = document.querySelector('.choices');
+  const isInside = dropdown && dropdown.contains(event.target);
+
+  if (!isInside) {
+    event.stopPropagation();
+    event.preventDefault(); // Предотвратить закрытие
+  }
+}, true);
