@@ -1,75 +1,67 @@
 // 6da9318b-b941-4543-8438-2c5dc690c064\
 
 export function loadYandexMaps() {
-  const API_KEY = '6da9318b-b941-4543-8438-2c5dc690c064'
+  const API_KEY = '07d3b38a-38e5-40d9-82c6-c6e51eaa0054'
   const script = document.createElement('script');
-
+  
   script.src = `https://api-maps.yandex.ru/2.1/?apikey=${API_KEY}&lang=ru_RU&onload=onYmapsLoad`;
-
+  
   script.async = true;
-
+  
   window.onYmapsLoad = () => {
     createMap();
     delete window.onYmapsLoad;
   };
-
+  
   document.head.appendChild(script);
 }
 
 function createMap() {
- ymaps.ready(() => {
-    try {
-      const map = new ymaps.Map('ymap', {
-        center: [55.751574, 37.573856], // Москва
-        zoom: 12,
-        controls: ['zoomControl', 'typeSelector']
-      });
+  ymaps.ready(() => {
+    const bounds = [[55.4899, 37.3193], [56.0097, 38.0801]];
+    
+  try {
+    const map = new ymaps.Map('ymap', {
+    center: [55.751574, 37.573856],
+    zoom: 12,
+    controls: ['zoomControl', 'typeSelector'],
+  });
 
-      // Добавляем метку
-      const placemark = new ymaps.Placemark([55.751574, 37.573856], {
-        hintContent: 'Кремль',
-        balloonContent: 'Московский Кремль'
-      }, {
-        preset: 'islands#redDotIcon'
-      });
+  // map.setLocation({
+  //    bounds: [[55.4899, 37.3193], [56.0097, 38.0801]]
+  //   });
 
-      map.geoObjects.add(placemark);
-      
-      console.log('Карта успешно создана');
-      
-    } catch (error) {
-      console.error('Ошибка создания карты:', error);
-    }
+  const placemark = new ymaps.Placemark([55.785169, 37.564042], {
+    hintContent: 'Адресс кафе',
+    balloonContent: 'Волконский'
+  }, {
+    preset: 'islands#icon',
+    iconColor:'#25A4A1' 
+
+  });
+
+    map.events.add('boundschange', function (event) {
+      const newBounds = map.getBounds();
+      const newCenter = map.getCenter();
+
+      // Проверяем, выходит ли центр за допустимые границы
+      if (
+        newCenter[0] < bounds[0][0] || newCenter[0] > bounds[1][0] ||
+        newCenter[1] < bounds[0][1] || newCenter[1] > bounds[1][1]
+      ) {
+        map.setCenter([55.751574, 37.573856]);
+      }
+    });
+  
+  
+  // map.behaviors.disable('scrollZoom');
+  map.options.set('minZoom', 11);
+  map.options.set('maxZoom', 20);
+  
+  
+  map.geoObjects.add(placemark);
+  } catch (error) {
+  console.error('Ошибка создания карты:', error);
+  }
   });
 }
-
-
-// if (window.ymaps) {
-//   console.log('API Яндекс.Карт уже загружен');
-//   initMap();
-// } else {
-//   console.log('Загружаем API Яндекс.Карт...');
-//   loadYandexMaps();
-// }
-
-// function loadYandexMaps() {
-//   const script = document.createElement('script');
-//   script.src = 'https://api-maps.yandex.ru/2.1/?apikey=6da9318b-b941-4543-8438-2c5dc690c064&lang=ru_RU';
-//   script.onload = () => {
-//     console.log('API успешно загружен! Версия:', ymaps.version);
-//     initMap();
-//   };
-//   script.onerror = () => console.error('Ошибка загрузки API!');
-//   document.head.appendChild(script);
-// }
-
-// function initMap() {
-//   ymaps.ready(() => {
-//     console.log('API готов к использованию');
-//     new ymaps.Map('map', {
-//       center: [55.76, 37.64],
-//       zoom: 10
-//     });
-//     console.log('Карта создана!');
-//   });
-// }
