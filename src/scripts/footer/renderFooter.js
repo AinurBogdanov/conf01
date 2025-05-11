@@ -1,17 +1,27 @@
+import { initHistory } from "../shered/navBar";
 const footerHTML = `
-  <div class="margin-top156"></div>
   <div class="footer-wrap">
     <div class="wrap">
       <footer class="footer">
-      <div class="foot">
-      <div class="footer-logo"></div>
+        <div class="foot">
+          <div class="footer-logo"></div>
+
           <div class="footer-sitemap">
-          <a href="#">Кондитерская</a>
+            <a href="/catalog/konditerskaya">Кондитерская</a>
           </div>
-          <div class="footer-sitemap"><a href="#">Кухня</a></div>
-          <div class="footer-sitemap"><a href="#">Пекарня</a></div>
-          <div class="footer-sitemap"><a href="#">фуршетноу меню</a></div>
-          <div class="footer-sitemap"><a href="#">Напитки</a></div>
+          <div class="footer-sitemap">
+            <a href="/catalog/kuhnya">Кухня</a>
+          </div>
+          <div class="footer-sitemap">
+            <a href="/catalog/pekarnya">Пекарня</a>
+          </div>
+          <div class="footer-sitemap">
+            <a href="/catalog/fur-shet">фуршетноу меню</a>
+          </div>
+          <div class="footer-sitemap">
+            <a href="/catalog/napitki">Напитки</a>
+          </div>
+
           <div class="footer-sitemap info">
             <div><a href="#">Адреса магазинов</a></div>
             <div><a href="#">Условия доставки</a></div>
@@ -67,7 +77,12 @@ export function renderFooter(location) {
     isFooter.remove();
   }
   location.insertAdjacentHTML("beforeend", footerHTML);
-  
+
+  changeImgWhatap(); 
+  initLinksFooter()
+}
+
+function changeImgWhatap() {
   const btn = document.querySelector('.footer-social-wha');
   const img = btn.querySelector('img');
   
@@ -77,4 +92,10 @@ export function renderFooter(location) {
   btn.addEventListener('mouseout', () => {
     img.src = '/images/footer-images/wha2.svg';
   });
+  
+}
+
+function initLinksFooter() {
+  const links = document.querySelectorAll('.footer-wrap a')
+  initHistory(links);
 }

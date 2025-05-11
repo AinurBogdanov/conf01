@@ -30,6 +30,7 @@ export function renderAddres() {
           </div>
         </div>
       </div>
+      <div class="margin-top156"></div>
     </div>
   `;
   const container = document.querySelector('.content')
