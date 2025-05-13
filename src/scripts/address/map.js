@@ -40,18 +40,38 @@ function createMap() {
 
   });
 
-    map.events.add('boundschange', function (event) {
-      const newBounds = map.getBounds();
-      const newCenter = map.getCenter();
+  const customPlaceMark = new ymaps.Placemark([55.765713, 37.591088], {
+    hintContent: 'Адресс кафе',
+    balloonContent: 'Волконский'
+  }, {
+    iconLayout: 'default#image',
+    iconImageHref: '/public/images/map/location-pin1.png',
+    iconImageSize: [50, 50],
+    iconImageOffset: [-15, -15]
+  }
 
-      // Проверяем, выходит ли центр за допустимые границы
-      if (
-        newCenter[0] < bounds[0][0] || newCenter[0] > bounds[1][0] ||
-        newCenter[1] < bounds[0][1] || newCenter[1] > bounds[1][1]
-      ) {
-        map.setCenter([55.751574, 37.573856]);
-      }
-    });
+  );
+
+  customPlaceMark.events
+    .add('mouseenter', function (e) {
+        e.get('target').options.set('iconImageHref', '/public/images/map/location-mark.png');
+    })
+    .add('mouseleave', function (e) {
+        e.get('target').options.set('iconImageHref', '/public/images/map/ location-pin1.png');
+    })
+
+  map.events.add('boundschange', function (event) {
+    const newBounds = map.getBounds();
+    const newCenter = map.getCenter();
+
+    // Проверяем, выходит ли центр за допустимые границы
+    if (
+      newCenter[0] < bounds[0][0] || newCenter[0] > bounds[1][0] ||
+      newCenter[1] < bounds[0][1] || newCenter[1] > bounds[1][1]
+    ) {
+      map.setCenter([55.751574, 37.573856]);
+    }
+  });
   
   
   // map.behaviors.disable('scrollZoom');
@@ -60,6 +80,7 @@ function createMap() {
   
   
   map.geoObjects.add(placemark);
+  map.geoObjects.add(customPlaceMark);
   } catch (error) {
   console.error('Ошибка создания карты:', error);
   }
