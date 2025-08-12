@@ -1,6 +1,6 @@
-import { initSwiper,initSecondSwiper } from "./InitSwiper";
-import { initScroll } from "./initScroll";
-import { renderFooter } from '../footer/renderFooter.js';
+import { initSwiper, initSecondSwiper } from './InitSwiper';
+import { initScroll } from './initScroll';
+import { renderFooter } from '../footer/renderFooter.ts';
 
 export function renderMain() {
   const content = document.querySelector('.content');
@@ -382,10 +382,8 @@ export function renderMain() {
       <div class="margin-top-104"></div>
   
     </div>
-  `
+  `;
   content.innerHTML = mainHTML;
-
-
 
   initSwiper();
   initSecondSwiper();

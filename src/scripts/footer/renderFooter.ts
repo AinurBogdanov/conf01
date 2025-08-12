@@ -1,4 +1,4 @@
-import { initHistory } from "../shered/navBar";
+import { initHistory } from '../shered/navBar';
 const footerHTML = `
   <div class="footer-wrap">
     <div class="wrap">
@@ -70,32 +70,33 @@ const footerHTML = `
       </footer>
     </div>    
   </div>
-`
-export function renderFooter(location) {
-  let isFooter =  document.querySelector('.footer-wrap');
-  if ( isFooter ) {
+`;
+export function renderFooter(location: Element | null) {
+  if (!location) return;
+  let isFooter = document.querySelector('.footer-wrap');
+  if (isFooter) {
     isFooter.remove();
   }
-  location.insertAdjacentHTML("beforeend", footerHTML);
+  location.insertAdjacentHTML('beforeend', footerHTML);
 
-  changeImgWhatap(); 
-  initLinksFooter()
+  changeImgWhatap();
+  initLinksFooter();
 }
 
 function changeImgWhatap() {
   const btn = document.querySelector('.footer-social-wha');
+  if (!btn) return;
   const img = btn.querySelector('img');
-  
+  if (!img) return;
   btn.addEventListener('mouseover', () => {
     img.src = '/images/footer-images/wha3.svg';
   });
   btn.addEventListener('mouseout', () => {
     img.src = '/images/footer-images/wha2.svg';
   });
-  
 }
 
 function initLinksFooter() {
-  const links = document.querySelectorAll('.footer-wrap a')
+  const links = document.querySelectorAll('.footer-wrap a');
   initHistory(links);
 }
