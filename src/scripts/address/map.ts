@@ -1,7 +1,5 @@
 // 6da9318b-b941-4543-8438-2c5dc690c064\
 
-import ymaps from 'yandex-maps';
-
 export function loadYandexMaps() {
   const API_KEY = '07d3b38a-38e5-40d9-82c6-c6e51eaa0054';
   const script = document.createElement('script');
@@ -66,7 +64,8 @@ function createMap() {
         .add('mouseenter', function (e) {
           const target = e.get('target');
           if (target) {
-            const goeObject = target as unknown as ymaps.GeoObject;
+            //toFix
+            const goeObject = target as any;
             goeObject.options.set(
               'iconImageHref',
               '/public/images/map/location-mark.png'
@@ -76,7 +75,8 @@ function createMap() {
         .add('mouseleave', function (e) {
           const target = e.get('target');
           if (target) {
-            const goeObject = target as unknown as ymaps.GeoObject;
+            //toFix
+            const goeObject = target as any;
             goeObject.options.set(
               'iconImageHref',
               '/public/images/map/ location-pin1.png'

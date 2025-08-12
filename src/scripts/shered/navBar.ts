@@ -1,5 +1,5 @@
 import { handleRouteChange } from './updateContent';
-import { cleanUpScroll } from '../mainJs/initScroll.ts';
+import { cleanUpScroll } from '../mainJs/initScroll';
 
 export function initNavLinks() {
   const navLinks = document.querySelectorAll('.menu-item a');
