@@ -1,5 +1,5 @@
 import { initSwiper, initSecondSwiper } from './InitSwiper';
-import { initScroll } from './initScroll';
+import { initScroll } from './initScroll.ts';
 import { renderFooter } from '../footer/renderFooter.ts';
 
 export function renderMain() {

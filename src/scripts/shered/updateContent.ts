@@ -2,7 +2,7 @@ import { navMenuHTML } from '../menuJs/renderMenu.js';
 import { renderFooter } from '../footer/renderFooter.js';
 import { renderMain } from '../mainJs/renderMain.js';
 import data from '../../data/products.json';
-import { cleanUpScroll } from '../mainJs/initScroll.js';
+import { cleanUpScroll } from '../mainJs/initScroll.ts/index.js';
 import { renderAddres } from '../address/addresMain';
 import { Product } from '../types/products.js';
 
