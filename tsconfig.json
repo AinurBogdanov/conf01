@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Совместимость с современным JS
+    "module": "commonjs", // Для Node.js (или "ESNext" для фронта)
+    "allowJs": true, // Разрешить .js файлы
+    "checkJs": false, // Пока не проверять .js файлы (включите позже)
+    "outDir": "./dist", // Папка для скомпилированного кода
+    "rootDir": "./src", // Исходные файлы
+    "strict": false, // Пока без строгой типизации
+    "esModuleInterop": true, // Для совместимости с CommonJS/ES модулями
+    "skipLibCheck": true // Пропускать проверку типов библиотек
+  },
+  "include": ["src/**/*"], // Какие файлы обрабатывать
+  "exclude": ["node_modules"] // Что игнорировать
+}
