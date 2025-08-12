@@ -1,5 +1,3 @@
-let currentCleanUp: null | (() => void) = null;
-
 export function initScroll() {
   const screens = document.querySelectorAll('.screen-scroll');
   const totalScreens = screens.length;
@@ -34,7 +32,6 @@ export function initScroll() {
     }, 800);
   }
   const wheelHandler = (e: WheelEvent) => {
-    console.log('wheel');
     const isScrollingPage =
       document.querySelector('html._screen-scrolling') !== null;
     if (isScrolling || !isScrollingPage) return;
@@ -69,17 +66,4 @@ export function initScroll() {
   };
 
   document.addEventListener('wheel', wheelHandler, { passive: false });
-
-  function cleanUpScroll() {
-    document.removeEventListener('wheel', wheelHandler);
-  }
-
-  currentCleanUp = cleanUpScroll;
-
-  return cleanUpScroll;
-}
-
-export function cleanUpScroll() {
-  if (currentCleanUp) currentCleanUp();
-  currentCleanUp = null;
 }

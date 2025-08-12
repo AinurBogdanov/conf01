@@ -1,5 +1,4 @@
 import { handleRouteChange } from './updateContent';
-import { cleanUpScroll } from '../mainJs/initScroll';
 
 export function initNavLinks() {
   const navLinks = document.querySelectorAll('.menu-item a');
@@ -15,7 +14,6 @@ export function initHistory(links: NodeListOf<Element>) {
       history.pushState(null, '', url);
 
       handleRouteChange();
-      cleanUpScroll();
     });
   });
 }

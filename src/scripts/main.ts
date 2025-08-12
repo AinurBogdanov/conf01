@@ -1,13 +1,12 @@
 import { renderMain } from './mainJs/renderMain';
 import { initNavLinks } from './shered/navBar';
-import { handleRouteChange } from './shered/updateContent.ts';
+import { handleRouteChange } from './shered/updateContent';
 
 // deciding what content to show
 const curentPath = window.location.pathname;
-let cleanUpScroll = () => {};
 
 if (curentPath === '/') {
-  cleanUpScroll = renderMain();
+  renderMain();
 } else {
   handleRouteChange();
 }

@@ -2,7 +2,6 @@ import { navMenuHTML } from '../menuJs/renderMenu.js';
 import { renderFooter } from '../footer/renderFooter.js';
 import { renderMain } from '../mainJs/renderMain.js';
 import data from '../../data/products.json';
-import { cleanUpScroll } from '../mainJs/initScroll';
 import { renderAddres } from '../address/addresMain';
 import { Product } from '../types/products.js';
 
@@ -36,7 +35,6 @@ export function handleRouteChange() {
 
   if (urlPath[0] && html) {
     html.classList.remove('_screen-scrolling');
-    cleanUpScroll();
   }
 
   if (urlPath[0] === 'address') {
