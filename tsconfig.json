@@ -12,6 +12,6 @@
     "moduleResolution": "node",
     "resolveJsonModule": true
   },
-  "include": ["src/**/*"], // Какие файлы обрабатывать
+  "include": ["src/**/*", "global.d.ts"], // Какие файлы обрабатывать
   "exclude": ["node_modules"] // Что игнорировать
 }

@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@types/node": "^24.2.1",
+    "@types/yandex-maps": "^2.1.36",
     "typescript": "^5.9.2",
     "vite": "^6.3.1",
     "vite-tsconfig-paths": "^5.1.4"
