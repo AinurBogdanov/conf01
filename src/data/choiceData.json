@@ -2,8 +2,8 @@
   "metro_stations": [
     {
       "value": "Все",
-      "lable": "Все",
-       "customProperties": {
+      "label": "Все",
+      "customProperties": {
         "color": "rgb(255,255,255)"
       }
     },
